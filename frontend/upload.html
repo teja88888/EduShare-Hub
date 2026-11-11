@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Study Materials | EduShare Hub</title>
+  <meta name="description" content="Upload PDF notes and academic resources to EduShare Hub. Your college name is attached while your personal identity remains strictly private.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z'/></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Modern Navigation Bar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/dashboard.html" class="brand-logo">
+        <div class="logo-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+            <path d="M5 13.18v4L12 21l7-3.82v-4"/>
+          </svg>
+        </div>
+        <div class="brand-text">EduShare<span>Hub</span></div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item">
+          <a href="/dashboard.html">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="/upload.html">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            Upload Notes
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/materials.html">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            Study Library
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/profile.html">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            My Profile
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-auth-controls">
+        <a href="/profile.html" class="user-profile-badge" title="View Profile">
+          <div class="user-avatar-circle" id="header-user-avatar">S</div>
+          <div class="user-meta-header">
+            <div class="user-name-text" id="header-user-name">Student</div>
+            <div class="user-college-tag" id="header-user-college">College</div>
+          </div>
+        </a>
+        <button class="btn btn-secondary btn-sm logout-btn" title="Sign Out">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="page-header">
+      <h1 class="page-title">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--royal-blue)" stroke-width="2.2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="17 8 12 3 7 8"></polyline>
+          <line x1="12" y1="3" x2="12" y2="15"></line>
+        </svg>
+        Upload Study Materials
+      </h1>
+      <p class="page-subtitle">Share high-quality PDF notes, solutions, and syllabi with fellow engineering and university students.</p>
+    </div>
+
+    <!-- Verified College Callout (Zero manual typing of college) -->
+    <div class="privacy-callout-banner">
+      <div class="privacy-shield-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="privacy-banner-text">
+        <h4>Uploading From Verified College: <span id="upload-student-college" style="color: #1d4ed8; font-weight: 800;">Your College</span></h4>
+        <p>
+          EduShare Hub automatically tags your verified college onto this upload. <strong>Your name, email, roll number, and student identity will remain strictly private and will never be shown to anyone.</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="upload-layout-grid">
+      
+      <!-- Upload Form Card -->
+      <div class="upload-form-card">
+        <form id="material-upload-form">
+
+          <!-- Drag and Drop PDF Zone -->
+          <div class="dropzone-container" id="pdf-dropzone">
+            <input type="file" id="pdf-file-input" accept="application/pdf,.pdf" style="display: none;">
+            <div class="dropzone-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="12" y2="12"></line>
+                <line x1="15" y1="15" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <div class="dropzone-title">Click to upload or drag and drop your PDF</div>
+            <div class="dropzone-subtitle">Supported format: PDF documents only (Max size: 25MB)</div>
+          </div>
+
+          <!-- Selected File Preview Badge -->
+          <div class="file-selected-box" id="file-selected-box">
+            <div style="display: flex; align-items: center; gap: 0.75rem; overflow: hidden;">
+              <div class="pdf-icon-badge" style="width: 36px; height: 36px; min-width: 36px;">
+                PDF
+              </div>
+              <div style="overflow: hidden;">
+                <div id="selected-file-name" style="font-weight: 700; font-size: 0.92rem; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">document.pdf</div>
+                <div id="selected-file-size" style="font-size: 0.78rem; color: #64748b;">1.2 MB</div>
+              </div>
+            </div>
+            <button type="button" id="remove-selected-file" class="btn btn-secondary btn-sm" style="color: #dc2626;">
+              Remove
+            </button>
+          </div>
+
+          <!-- Progress Bar Indicator -->
+          <div class="upload-progress-wrapper" id="upload-progress-wrapper">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.35rem;">
+              <span>Encrypting &amp; Uploading PDF...</span>
+              <span id="upload-percent-text">Uploading</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" id="upload-progress-fill"></div>
+            </div>
+          </div>
+
+          <!-- Metadata Fields -->
+          <div class="form-group" style="margin-top: 1.5rem;">
+            <label class="form-label" for="upload-title">Material Title <span class="required">*</span></label>
+            <input type="text" id="upload-title" class="form-control no-icon" placeholder="e.g. Java Complete Handwritten Notes (Unit 1 to 5)" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="upload-subject">Subject <span class="required">*</span></label>
+              <input type="text" id="upload-subject" class="form-control no-icon" placeholder="e.g. Java, Python, DBMS, OS" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="upload-semester">Semester <span class="required">*</span></label>
+              <select id="upload-semester" class="form-control no-icon" required>
+                <option value="1-1">1-1 (First Year, Sem 1)</option>
+                <option value="1-2">1-2 (First Year, Sem 2)</option>
+                <option value="2-1">2-1 (Second Year, Sem 1)</option>
+                <option value="2-2">2-2 (Second Year, Sem 2)</option>
+                <option value="3-1" selected>3-1 (Third Year, Sem 1)</option>
+                <option value="3-2">3-2 (Third Year, Sem 2)</option>
+                <option value="4-1">4-1 (Final Year, Sem 1)</option>
+                <option value="4-2">4-2 (Final Year, Sem 2)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="upload-department">Department / Branch <span class="required">*</span></label>
+            <select id="upload-department" class="form-control no-icon" required>
+              <option value="Computer Science & Engineering">Computer Science &amp; Engineering</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Electronics & Communication Engineering">Electronics &amp; Communication Engineering</option>
+              <option value="Electrical & Electronics Engineering">Electrical &amp; Electronics Engineering</option>
+              <option value="Mechanical Engineering">Mechanical Engineering</option>
+              <option value="Civil Engineering">Civil Engineering</option>
+              <option value="Artificial Intelligence & Data Science">AI &amp; Data Science</option>
+              <option value="Other / Interdisciplinary">Other / Interdisciplinary</option>
+            </select>
+          </div>
+
+          <button type="submit" id="upload-submit-btn" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            Publish Material to Library
+          </button>
+        </form>
+      </div>
+
+      <!-- Guidelines & Privacy Guarantee Sidebar -->
+      <aside class="upload-tips-card">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--royal-blue)" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          Upload Guidelines
+        </h3>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.88rem; color: #334155;">
+          <div style="display: flex; gap: 0.75rem;">
+            <div style="color: #10b981; font-weight: 800;">&check;</div>
+            <div><strong>Accepted Formats:</strong> High quality readable PDFs, handwritten scans, lab records, and syllabus summaries.</div>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <div style="color: #10b981; font-weight: 800;">&check;</div>
+            <div><strong>Zero Identity Exposure:</strong> Neither your name nor email will ever be revealed. Only your college badge is tagged.</div>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <div style="color: #10b981; font-weight: 800;">&check;</div>
+            <div><strong>You Own Your Content:</strong> You can manage or delete your uploaded documents at any time from your Profile page.</div>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <div style="color: #ef4444; font-weight: 800;">&cross;</div>
+            <div><strong>Strictly Forbidden:</strong> Copyrighted commercial textbooks or non-academic content.</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); text-align: center;">
+          <a href="/materials.html" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Explore Existing Resources
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>&copy; 2026 EduShare Hub. Academic knowledge sharing with 100% uploader privacy.</div>
+      <div>
+        <a href="/dashboard.html" style="color: var(--royal-blue); text-decoration: none; font-weight: 600; margin-right: 1rem;">Dashboard</a>
+        <a href="/materials.html" style="color: var(--royal-blue); text-decoration: none; font-weight: 600;">Library</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

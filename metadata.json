@@ -1,0 +1,6 @@
+{
+  "name": "EduShare Hub",
+  "description": "Student Knowledge Sharing Platform for uploading, discovering, and downloading college study materials with complete student privacy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

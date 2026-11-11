@@ -1,0 +1,18 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Sensitive database storage & private student data
+backend/data/*.json
+!backend/data/.gitkeep
+
+# Uploaded user files (keep sample educational assets)
+backend/uploads/*
+!backend/uploads/.gitkeep
+!backend/uploads/sample-*.pdf
+
