@@ -204,5 +204,8 @@ EduShare Hub includes 5 initial verified demo resources pre-loaded with valid PD
 
 ---
 
+PPT : https://docs.google.com/presentation/d/1oZkT0oyDIXQyh1-oB1zJMSZrgSOHw3i1/edit?usp=drivesdk&ouid=108544135764767682674&rtpof=true&sd=true
+
+
 ## 📄 License
 This project is licensed under the Apache-2.0 License.
